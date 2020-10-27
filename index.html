@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formulaire de contact</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <form name="contactForm" onkeyup="return validateForm()">
+        <h2>Formulaire de contact</h2>
+        <div class="row">
+            <label>Pseudo</label>
+            <input type="text" name="name" class="textInForm" required>
+            <div class="error" id="errorName"></div>
+        </div>
+        <div class="row">
+            <label>Adresse email</label>
+            <input type="text" name="email" class="textInForm" required>
+            <div class="error" id="errorEmail"></div>
+        </div>
+        <div class="row">
+            <label for="password2">Mot de passe:</label>
+            <input type="password" name="password" id="password2" class="textInForm" required onkeyup="passwordConfirmation();">
+        </div>
+        <div class="row">
+            <label for="confirm2">Confirmation du mot de passe:</label>
+            <input type="password" name="confirm" id="confirm2" class="textInForm" required onkeyup="passwordConfirmation();">
+            <span id="confirmMess2" class="confirmMess"></span>
+        </div>
+        <div class="row">
+            <button type="submit" id="submitBtn" onkeyup="success()" disabled>Envoyer</button>
+        </div>
+    </form>
+    <script src="assets/js/index.js"></script>
+</body>
+
+</html>
